@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PivotGridControl_CustomCellEdit", "PivotGridControl_CustomCellEdit\PivotGridControl_CustomCellEdit.vbproj", "{0601C227-82D7-4C92-9B62-CD3915691726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0601C227-82D7-4C92-9B62-CD3915691726}.Debug|x86.ActiveCfg = Debug|x86
+		{0601C227-82D7-4C92-9B62-CD3915691726}.Debug|x86.Build.0 = Debug|x86
+		{0601C227-82D7-4C92-9B62-CD3915691726}.Release|x86.ActiveCfg = Release|x86
+		{0601C227-82D7-4C92-9B62-CD3915691726}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
