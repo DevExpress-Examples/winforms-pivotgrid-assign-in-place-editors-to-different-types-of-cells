@@ -24,13 +24,18 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.PercentOfTotalBinding percentOfTotalBinding1 = new DevExpress.XtraPivotGrid.PercentOfTotalBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding4 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-            this.fieldOrderDate = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldProductName = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldQuantity = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.fieldQuantityPercent = new DevExpress.XtraPivotGrid.PivotGridField();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nwindDataSet = new PivotGridControl_CustomCellEdit.nwindDataSet();
+            this.fieldOrderDate1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldProductName1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldQuantity1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldQuantityPercent = new DevExpress.XtraPivotGrid.PivotGridField();
             this.salesPersonTableAdapter = new PivotGridControl_CustomCellEdit.nwindDataSetTableAdapters.SalesPersonTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
@@ -42,48 +47,16 @@
             this.pivotGridControl1.DataSource = this.salesPersonBindingSource;
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
-            this.fieldOrderDate,
-            this.fieldProductName,
-            this.fieldQuantity,
+            this.fieldOrderDate1,
+            this.fieldProductName1,
+            this.fieldQuantity1,
             this.fieldQuantityPercent});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
             this.pivotGridControl1.Size = new System.Drawing.Size(660, 403);
             this.pivotGridControl1.TabIndex = 0;
             this.pivotGridControl1.CustomCellValue += new System.EventHandler<DevExpress.XtraPivotGrid.PivotCellValueEventArgs>(this.pivotGridControl1_CustomCellValue);
-            // 
-            // fieldOrderDate
-            // 
-            this.fieldOrderDate.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-            this.fieldOrderDate.AreaIndex = 0;
-            this.fieldOrderDate.Caption = "Order Date";
-            this.fieldOrderDate.FieldName = "OrderDate";
-            this.fieldOrderDate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
-            this.fieldOrderDate.Name = "fieldOrderDate";
-            this.fieldOrderDate.UnboundFieldName = "fieldOrderDate";
-            // 
-            // fieldProductName
-            // 
-            this.fieldProductName.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-            this.fieldProductName.AreaIndex = 0;
-            this.fieldProductName.Caption = "Product Name";
-            this.fieldProductName.FieldName = "ProductName";
-            this.fieldProductName.Name = "fieldProductName";
-            // 
-            // fieldQuantity
-            // 
-            this.fieldQuantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldQuantity.AreaIndex = 0;
-            this.fieldQuantity.FieldName = "Quantity";
-            this.fieldQuantity.Name = "fieldQuantity";
-            // 
-            // fieldQuantityPercent
-            // 
-            this.fieldQuantityPercent.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-            this.fieldQuantityPercent.AreaIndex = 1;
-            this.fieldQuantityPercent.Caption = "Quantity %";
-            this.fieldQuantityPercent.FieldName = "Quantity";
-            this.fieldQuantityPercent.Name = "fieldQuantityPercent";
             // 
             // salesPersonBindingSource
             // 
@@ -94,6 +67,46 @@
             // 
             this.nwindDataSet.DataSetName = "nwindDataSet";
             this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fieldOrderDate1
+            // 
+            this.fieldOrderDate1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.fieldOrderDate1.AreaIndex = 0;
+            this.fieldOrderDate1.Caption = "Order Date";
+            dataSourceColumnBinding1.ColumnName = "OrderDate";
+            dataSourceColumnBinding1.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.fieldOrderDate1.DataBinding = dataSourceColumnBinding1;
+            this.fieldOrderDate1.Name = "fieldOrderDate1";
+            // 
+            // fieldProductName1
+            // 
+            this.fieldProductName1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldProductName1.AreaIndex = 0;
+            this.fieldProductName1.Caption = "Product Name";
+            dataSourceColumnBinding2.ColumnName = "ProductName";
+            this.fieldProductName1.DataBinding = dataSourceColumnBinding2;
+            this.fieldProductName1.Name = "fieldProductName1";
+            // 
+            // fieldQuantity1
+            // 
+            this.fieldQuantity1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldQuantity1.AreaIndex = 0;
+            dataSourceColumnBinding3.ColumnName = "Quantity";
+            this.fieldQuantity1.DataBinding = dataSourceColumnBinding3;
+            this.fieldQuantity1.Name = "fieldQuantity1";
+            // 
+            // fieldQuantityPercent
+            // 
+            this.fieldQuantityPercent.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldQuantityPercent.AreaIndex = 1;
+            this.fieldQuantityPercent.Caption = "Quantity %";
+            this.fieldQuantityPercent.CellFormat.FormatString = "{0} %";
+            this.fieldQuantityPercent.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            percentOfTotalBinding1.PartitioningCriteria = DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.ColumnValue;
+            dataSourceColumnBinding4.ColumnName = "Quantity";
+            percentOfTotalBinding1.Source = dataSourceColumnBinding4;
+            this.fieldQuantityPercent.DataBinding = percentOfTotalBinding1;
+            this.fieldQuantityPercent.Name = "fieldQuantityPercent";
             // 
             // salesPersonTableAdapter
             // 
@@ -121,9 +134,9 @@
         private nwindDataSet nwindDataSet;
         private System.Windows.Forms.BindingSource salesPersonBindingSource;
         private nwindDataSetTableAdapters.SalesPersonTableAdapter salesPersonTableAdapter;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldOrderDate;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldProductName;
-        private DevExpress.XtraPivotGrid.PivotGridField fieldQuantity;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldOrderDate1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldProductName1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldQuantity1;
         private DevExpress.XtraPivotGrid.PivotGridField fieldQuantityPercent;
     }
 }

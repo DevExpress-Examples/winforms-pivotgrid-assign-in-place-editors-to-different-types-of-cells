@@ -19,11 +19,6 @@ Namespace PivotGridControl_CustomCellEdit
             ' Binds the pivot grid to data.
             Me.salesPersonTableAdapter.Fill(Me.nwindDataSet.SalesPerson)
 
-            ' Specifies the type of data field and format settings.
-            fieldQuantity1.SummaryDisplayType = DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumn
-            fieldQuantity1.CellFormat.FormatType = DevExpress.Utils.FormatType.Custom
-            fieldQuantity1.CellFormat.FormatString = "{0}%"
-
             ' Initializes cell editors used to represent values of regular and total cells respectively.
             pivotGridControl1.RepositoryItems.AddRange(New RepositoryItem() {riProgressBar, riSpinEdit})
         End Sub
@@ -31,7 +26,7 @@ Namespace PivotGridControl_CustomCellEdit
         Private Sub pivotGridControl1_CustomCellEdit(ByVal sender As Object,
                             ByVal e As PivotCustomCellEditEventArgs) Handles pivotGridControl1.CustomCellEdit
             ' Specifies editors for cells depending on a cell type.
-            If e.DataField Is fieldQuantity1 Then
+            If e.DataField Is fieldQuantity Then
                 If e.RowValueType = PivotGridValueType.GrandTotal Then
                     e.RepositoryItem = riSpinEdit
                 End If
@@ -43,7 +38,7 @@ Namespace PivotGridControl_CustomCellEdit
 
         Private Sub pivotGridControl1_CustomCellValue(ByVal sender As Object,
                             ByVal e As PivotCellValueEventArgs) Handles pivotGridControl1.CustomCellValue
-            If e.DataField Is fieldQuantity1 Then
+            If e.DataField Is fieldQuantity Then
                 e.Value = Convert.ToDecimal(e.Value) * 100
             End If
         End Sub
