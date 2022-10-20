@@ -4,17 +4,28 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 <!-- default file list -->
-*Files to look at*:
+
+# Pivot Grid for WinForms - Assign In-Place Editors to Different Types of Cells
+
+The following example shows how to handle the [PivotGridControl.CustomCellEdit](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomCellEdit) event to assign different in-place editors to different types of cells.
+
+![Pivot Grid](images/pivotgrid.png)
+
+In the example, two in-place editors (repository items) are created to display values of the "Quantity %" field. The `ProgressBar` editor displays regular cell values as progress bars. The `SpinEdit` editor allows you to edit total values for the field.
+
+## Files to Review
 
 * [Form1.cs](./CS/PivotGridControl_CustomCellEdit/Form1.cs) (VB: [Form1.vb](./VB/PivotGridControl_CustomCellEdit/Form1.vb))
 * [Program.cs](./CS/PivotGridControl_CustomCellEdit/Program.cs) (VB: [Program.vb](./VB/PivotGridControl_CustomCellEdit/Program.vb))
-<!-- default file list end -->
-# How to assign different in-place editors to different types of cells
+
+## Documentation
+
+[Assigning Editors for In-place Editing](https://docs.devexpress.com/WindowsForms/5896/controls-and-libraries/pivot-grid/data-shaping/editing/assigning-editors-for-in-place-editing)
+
+## More Examples
+
+[Pivot Grid for WinForms - Override the Cell Editor](https://github.com/DevExpress-Examples/how-to-override-the-cell-editor-used-for-the-in-place-editing-t515806)
 
 
-<p>The following code shows how to handle the <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_CustomCellEdittopic">PivotGridControl.CustomCellEdit</a> event to assign different in-place editors to different types of cells.</p>
-<p>In the example, two in-place editors (repository items) are created to represent values of the "Quantity %" field. The ProgressBar editor is used to represent regular cell values, while the SpinEdit editor is used to represent total values for this field.</p>
-
-<br/>
 
 
